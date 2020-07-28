@@ -12,6 +12,8 @@ buildscript {
 }
 
 apply plugin: 'io.codearte.nexus-staging'
+apply plugin: 'application'
+
 nexusStaging {
     packageGroup = GROUP
     username = System.getenv('NEXUS_USERNAME')
@@ -73,4 +75,8 @@ subprojects { project ->
 
 wrapper {
     gradleVersion = '6.3'
+}
+
+application {
+    applicationDefaultJvmArgs = ["-agentpath:/Users/vijayselvaraj/Development/sandbox/rollbar-java/native-agent/target/release/" +System.mapLibraryName("rollbar_java_agent") ]
 }
