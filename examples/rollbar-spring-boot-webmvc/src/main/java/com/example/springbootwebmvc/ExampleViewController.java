@@ -18,8 +18,12 @@ public class ExampleViewController {
   public void exceptionTest() {
 
     // This exception will be passed now via the exception resolver
-    int x = 1 / 0;
+    this.divideTwoNumbers(1,0);
 
+  }
+
+  private void divideTwoNumbers(int a, int b) {
+    int x = a / b;
   }
 
   /**
