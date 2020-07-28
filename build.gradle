@@ -78,5 +78,5 @@ wrapper {
 }
 
 application {
-    applicationDefaultJvmArgs = ["-agentpath:/Users/vijayselvaraj/Development/sandbox/rollbar-java/native-agent/target/release/" +System.mapLibraryName("rollbar_java_agent") ]
+    applicationDefaultJvmArgs = ["-agentpath:/Users/vijayselvaraj/Development/rollbar-java/native-agent/target/release/" +System.mapLibraryName("rollbar_java_agent") ]
 }

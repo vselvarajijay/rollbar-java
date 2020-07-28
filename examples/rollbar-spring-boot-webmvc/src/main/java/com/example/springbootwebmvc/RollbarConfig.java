@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import com.example.springbootwebmvc.RollbarServerProvider;
 
+import java.util.Arrays;
+
 
 @Configuration()
 @EnableWebMvc
@@ -38,6 +40,7 @@ public class RollbarConfig {
     // Reference ConfigBuilder.java for all the properties you can set for Rollbar
     return RollbarSpringConfigBuilder.withAccessToken(this.accessToken)
             .environment(this.environment)
+            .appPackages(Arrays.asList("com.example.springbootwebmvc"))
             .server(new RollbarServerProvider())
             .build();
   }
